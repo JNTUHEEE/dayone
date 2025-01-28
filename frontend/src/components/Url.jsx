@@ -9,7 +9,7 @@ function Url() {
 
     const [path,setPath] = useState(null)
     useEffect(()=>{
-        axios.get(`http://localhost:3000/short/${id}`).then((res)=>{
+        axios.get(`https://dayone-hwpu.onrender.com/${id}`).then((res)=>{
             if(res.data.url){
                 window.location.href = `${res.data.url}`
             }
