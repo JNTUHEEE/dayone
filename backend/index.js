@@ -48,7 +48,7 @@ app.get('/short/:shortid',async(req,res)=>{
     shortid = shortid.toLowerCase()
     let exist = await urls.findOne({shortid})
     if(!exist){
-        return res.status(404).json({message: "Error 404 NOT FOUND....."})
+        return res.json({message: "Error 404 NOT FOUND....."})
     }
     return res.status(200).json({url: exist.originalURL})
 })
