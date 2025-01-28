@@ -10,7 +10,7 @@ function Create() {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        axios.post('http://localhost:3000/newurl',{originalURL}).then((res)=>{
+        axios.post('https://dayone-hwpu.onrender.com/newurl',{originalURL}).then((res)=>{
             setnewurl(`${window.location.origin}/${res.data.newURL.shortid}`)
         })
         setOriginalURL("")
